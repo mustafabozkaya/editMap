@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Config from "../scripts/Config"; // import config file
-import * as ROSLIB from "roslib"; // import roslib library
+import Config from "../scripts/Config"; // import Config from "../scripts/Config";
+import * as ROSLIB from "roslib"; // import roslib from "roslib";
 import Connection from "./Connection"; // import components map , connection ...etc
 import { Row, Col, Container } from "react-bootstrap"; // import feature from react bootstrap
 import Map from "./Map";

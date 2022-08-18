@@ -8,7 +8,7 @@ const Connection = (props) => {
   return (
     <div>
       <Alert // render alert message to know if the ros connected or not
-        className="text-center"
+        className="text-center h-auto"
         // the next syntex is an if statment
         variant={ros.isConnected ? "success" : "danger"}
       >

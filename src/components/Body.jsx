@@ -9,6 +9,8 @@ class Body extends Component {
       <Container>
         <Router>
           <Routes>
+            {/* <Route path="/" element={<Home />} /> */}
+            {/* exact means that this route will only match if the path is exactly "/" */}
             <Route path="/" exact element={<Home />}></Route>
           </Routes>
         </Router>

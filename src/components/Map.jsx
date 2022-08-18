@@ -7,7 +7,7 @@ import robot from "../scripts/robot.png";
 import ToggleButton from "react-bootstrap/ToggleButton";
 import ToggleButtonGroup from "react-bootstrap/ToggleButtonGroup";
 import charging_station from "../scripts/charging_station.png";
-import getYawFromQuat from "../scripts/getY";
+import getYawFromQuater from "../scripts/getY";
 import { IoIosRefresh } from "react-icons/io";
 import { BsZoomIn } from "react-icons/bs";
 import { FaExpandArrowsAlt } from "react-icons/fa";
@@ -132,14 +132,14 @@ const Map = (props) => {
   function charging_stations1() {
     cahrging_station_image1.x = charging_station_param.position.x;
     cahrging_station_image1.y = -charging_station_param.position.y;
-    cahrging_station_image1.rotation = (-getYawFromQuat(
+    cahrging_station_image1.rotation = (-getYawFromQuater(
       charging_station_param.orientation
     )).toFixed(2);
   }
   function charging_stations2() {
     cahrging_station_image2.x = charging_station_param.position.x;
     cahrging_station_image2.y = -charging_station_param.position.y;
-    cahrging_station_image2.rotation = (-getYawFromQuat(
+    cahrging_station_image2.rotation = (-getYawFromQuater(
       charging_station_param.orientation
     )).toFixed(2);
   }
@@ -153,7 +153,9 @@ const Map = (props) => {
     position.subscribe((message) => {
       robot_image.x = message.position.x.toFixed(2);
       robot_image.y = -message.position.y.toFixed(2);
-      robot_image.rotation = (-getYawFromQuat(message.orientation)).toFixed(2);
+      robot_image.rotation = (-getYawFromQuater(message.orientation)).toFixed(
+        2
+      );
       trace_shape.addPose(message);
     });
     var trace_Shape = new ROSLIB.Topic({
@@ -272,7 +274,7 @@ const Map = (props) => {
     viewer.scene.addChild(trace_shape);
 
     goal_subscriber.subscribe((message) => {
-      var yaw = getYawFromQuat(message.pose.orientation);
+      var yaw = getYawFromQuater(message.pose.orientation);
       goal_image.x = message.pose.position.x;
       goal_image.y = -message.pose.position.y;
       goal_image.rotation = yaw;
