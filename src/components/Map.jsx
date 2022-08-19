@@ -17,6 +17,8 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { GiPositionMarker } from "react-icons/gi";
 import { AiOutlineSave } from "react-icons/ai";
 import { Row, Col, Container } from "react-bootstrap"; // import feature from react bootstrap
+
+import { useHistory } from "react-router-dom"; // import useHistory from react-router-dom to use history.push() to navigate to another page when button is clicked
 const Map = (props) => {
   var gridClient;
   var robot_image;

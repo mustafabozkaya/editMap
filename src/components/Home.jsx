@@ -6,7 +6,6 @@ import { Row, Col, Container } from "react-bootstrap"; // import feature from re
 import Map from "./Map";
 
 class Home extends Component {
- 
   state = {
     ros: null,
   };
@@ -15,7 +14,7 @@ class Home extends Component {
     this.init_connection();
   }
   init_connection() {
-    // declare object from ROSLIB library caalled ros
+    // declare object from ROSLIB library called ros
     this.state.ros = new ROSLIB.Ros();
     // print it to console
     console.log(this.state.ros);
@@ -80,7 +79,7 @@ class Home extends Component {
             </Col>
           </Row>
           <Row>
-            <Map ros={this.state.ros} float="left"/>
+            <Map ros={this.state.ros} float="left" />
             <Col></Col>
           </Row>
         </Container>
