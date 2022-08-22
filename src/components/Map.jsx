@@ -20,6 +20,7 @@ import { Row, Col, Container } from "react-bootstrap"; // import feature from re
 
 import { useHistory } from "react-router-dom"; // import useHistory from react-router-dom to use history.push() to navigate to another page when button is clicked
 const Map = (props) => {
+  const [mapi, setMap] = useState(null);
   var gridClient;
   var robot_image;
   var viewer;

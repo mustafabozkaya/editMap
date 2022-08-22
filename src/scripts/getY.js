@@ -14,11 +14,11 @@ const getYawFromQuater = (q) => {
   // console.log("yaw: " + yaw);
   // write the all items in the yaw to the console
 
-  console.log("order: " + euler.order);
-  console.log("pitch: " + euler["y"]);
-  console.log("roll: " + euler["x"]);
-  console.log("yaw: " + euler["z"]);
-  console.log("eular yaw is: " + euler["z"]);
+  // console.log("order: " + euler.order);
+  // console.log("pitch: " + euler["y"]);
+  // console.log("roll: " + euler["x"]);
+  // console.log("yaw: " + euler["z"]);
+  // console.log("eular yaw is: " + euler["z"]);
 
   return euler["z"] * (180 / Math.PI);
 };
